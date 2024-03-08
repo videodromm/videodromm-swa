@@ -6,16 +6,12 @@ import { Shader } from '../models/Glsl';
 
 import './UniformList.css';
 
-interface OwnProps { };
-
 interface StateProps {
   uniforms: Uniform[];
   uniformShaders: { [key: string]: Shader[] };
 };
 
-interface DispatchProps { };
-
-interface UniformListProps extends OwnProps, StateProps, DispatchProps { };
+interface UniformListProps extends  StateProps { };
 
 const UniformList: React.FC<UniformListProps> = ({ uniforms, uniformShaders }) => {
 
