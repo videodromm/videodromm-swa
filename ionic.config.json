@@ -1,0 +1,7 @@
+{
+  "name": "videodromm",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
