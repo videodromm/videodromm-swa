@@ -6,14 +6,14 @@ import { Shader } from '../models/Glsl';
 
 import './UniformList.css';
 
-interface StateProps {
-  uniforms: Uniform[];
-  uniformShaders: { [key: string]: Shader[] };
-};
+// interface StateProps {
+//   uniforms: Uniform[];
+//   uniformShaders: { [key: string]: Shader[] };
+// };
 
-interface UniformListProps extends  StateProps { };
+//interface UniformListProps extends  StateProps { };
 
-const UniformList: React.FC<UniformListProps> = ({ uniforms, uniformShaders }) => {
+const UniformList: React.FC = () => {
 
   return (
     <IonPage id="uniform-list">
@@ -34,7 +34,7 @@ const UniformList: React.FC<UniformListProps> = ({ uniforms, uniformShaders }) =
         </IonHeader>
 
           <IonGrid fixed>
-            <IonRow>
+            {/* <IonRow>
               {uniforms.map(uniform => (
                 <IonCol size="4"  key={uniform.id}>
                   <UniformItem
@@ -44,7 +44,7 @@ const UniformList: React.FC<UniformListProps> = ({ uniforms, uniformShaders }) =
                   />
                 </IonCol>
               ))}
-            </IonRow>
+            </IonRow> */}
           </IonGrid>
       </IonContent>
     </IonPage>

@@ -7,6 +7,7 @@ import {
   RadioButton
 } from 'react-nexusui';
 
+declare const window: any;
 
 interface UniformItemProps {
   uniform: Uniform;

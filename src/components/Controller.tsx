@@ -3,7 +3,7 @@ import {
   Dial,
   RadioButton
 } from 'react-nexusui';
-import UniformList from "./components/UniformList";
+import UniformList from "./UniformList";
 import './Controller.css';
 
 interface ContainerProps {
