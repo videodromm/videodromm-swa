@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import useStore from "../data/store";
 import UniformList from "./UniformList";
-import './Controller.css';
+import './Home.css';
 import { getPreferences, setPreferences } from '../lib/Utils';
 import { CONFIG } from '../config';
 import { WsMessage } from '../models/WsMessage'; 
@@ -14,7 +14,7 @@ interface ContainerProps {
   name: string;
 }
 
-const Controller: React.FC<ContainerProps> = ({ name }) => {
+const Home: React.FC<ContainerProps> = ({ name }) => {
   const {
     uniforms,
     setUniforms,
@@ -105,4 +105,4 @@ const Controller: React.FC<ContainerProps> = ({ name }) => {
   );
 };
 
-export default Controller;
+export default Home;

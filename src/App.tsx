@@ -2,7 +2,8 @@ import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/r
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
-import Page from './pages/Page';
+//import Page from './pages/Page';
+import Home from './components/Home';
 import Controller from './components/Controller';
 import Shaders from './components/Shaders';
 
@@ -35,7 +36,8 @@ const App: React.FC = () => {
           <Menu />
           <IonRouterOutlet id="main">
             <Route path="/" exact={true}>
-              <Redirect to="/Controller" />
+              <Home name="Home" />
+              {/* <Redirect to="/Controller" /> */}
             </Route>
             <Route path="/Controller" exact={true}>
               <Controller name="Controller" />
