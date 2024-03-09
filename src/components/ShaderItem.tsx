@@ -15,26 +15,7 @@ const ShaderItem: React.FC<ShaderItemProps> = ({ shader }) => {
     shaders,
     setShaders,
   } = useStore();
-  //const [shaderValue, setShaderValue] = React.useState<string>("0.5");
-  const emitToSocket = (value: string, index: number) => {
-    //setShaderValue(value);
-    setShaders( 
-      shaders.map((shader:Shader) => {
-        if (shader.id === index) {
-          return {
-            ...shader,
-            value: value
-          };
-        }
-        return shader;
-      })
-    );
-    if (window.socket && window.socket.readyState === 1) {
-      window.socket.send(
-        '{"params" :[{"name" : ' + index + ',"value" :' + value + "}]}"
-      );
-    } 
-  };
+
   const emitFragToSocket = () => {
     let msg = shader.fragtext.replace(/uniform vec2 resolution/, 'uniform vec3 iResolution');
     /*msg = msg.replace(/resolution/g, 'iResolution');

@@ -8,38 +8,31 @@ declare const window: any;
 
 interface UniformItemProps {
   uniform: Uniform;
-  
 }
 
 const UniformItem: React.FC<UniformItemProps> = ({ uniform }) => {
-  const {
-    uniforms,
-    setUniforms,
-  } = useStore();
-  const [uniformValue, setUniformValue] = React.useState<number>(1.001);
+  const { uniforms, setUniforms } = useStore();
+  const [uniformValue, setUniformValue] = React.useState<number>(42);
   let dialRefs = React.useRef([] as any[]);
   const emitToSocket = (value: number, index: number) => {
-    setUniformValue(value);
-    setUniforms( 
-      uniforms.map((uniform:Uniform) => {
-        if (uniform.id === index) {
-          return {
-            ...uniform,
-            value: value
-          };
-        }
-        return uniform;
-      })
-    );
-    if (window.socket && window.socket.readyState === 1) {
-      window.socket.send(
-        '{"params" :[{"name" : ' + index + ',"value" :' + value + "}]}"
+    if (value !== 42) {
+      setUniformValue(value);
+      setUniforms(
+        uniforms.map((uniform: Uniform) => {
+          if (uniform.id === index) {
+            return {
+              ...uniform,
+              value: value,
+            };
+          }
+          return uniform;
+        })
       );
-      // console.log(
-      //   `UniformItem emitToSocket readyState val: ${value}, idx: ${index} `
-      // );
-    } else {
-      //console.log(`UniformItem emitToSocket not ready val: ${value}, idx: ${index} `);
+      if (window.socket && window.socket.readyState === 1) {
+        window.socket.send(
+          '{"params" :[{"name" : ' + index + ',"value" :' + value + "}]}"
+        );
+      }
     }
   };
   const setAnim = (value: number, index: number) => {
