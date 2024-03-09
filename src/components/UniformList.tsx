@@ -11,22 +11,7 @@ const UniformList: React.FC = () => {
     uniforms,
   } = useStore();
   return (
-    <IonPage id="uniform-list">
-      <IonHeader translucent={true}>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>Uniforms</IonTitle>
-        </IonToolbar>
-      </IonHeader>
 
-      <IonContent fullscreen={true}>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Uniforms</IonTitle>
-          </IonToolbar>
-        </IonHeader>
 
           <IonGrid fixed>
             <IonRow>
@@ -41,8 +26,7 @@ const UniformList: React.FC = () => {
               ))}
             </IonRow>
           </IonGrid>
-      </IonContent>
-    </IonPage>
+    
   );
 };
 

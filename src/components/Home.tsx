@@ -93,16 +93,12 @@ const Home: React.FC<ContainerProps> = ({ name }) => {
         <IonButtons slot="start">
           <IonMenuButton />
         </IonButtons>
-        <IonTitle>{name}</IonTitle> <UniformList />
+        <IonTitle>{name}</IonTitle>
       </IonToolbar>
     </IonHeader>
 
     <IonContent fullscreen>
-      <div id="container">
-      <strong>{name}</strong>
-      <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-     
-    </div>
+      <UniformList />
     </IonContent>
   </IonPage>
   );
