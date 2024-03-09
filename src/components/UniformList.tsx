@@ -3,18 +3,14 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonButtons, IonMe
 import UniformItem from './UniformItem';
 import { Uniform } from '../models/Uniform';
 import { Shader } from '../models/Glsl';
-
+import useStore from "../data/store";
+import { CONFIG } from "../config";
 import './UniformList.css';
 
-// interface StateProps {
-//   uniforms: Uniform[];
-//   uniformShaders: { [key: string]: Shader[] };
-// };
-
-//interface UniformListProps extends  StateProps { };
-
 const UniformList: React.FC = () => {
-
+  const {
+    uniforms,
+  } = useStore();
   return (
     <IonPage id="uniform-list">
       <IonHeader translucent={true}>
@@ -34,17 +30,17 @@ const UniformList: React.FC = () => {
         </IonHeader>
 
           <IonGrid fixed>
-            {/* <IonRow>
+            <IonRow>
               {uniforms.map(uniform => (
                 <IonCol size="4"  key={uniform.id}>
                   <UniformItem
                     key={uniform.id}
                     uniform={uniform}
-                    shaders={uniformShaders[uniform.name]}
+                    
                   />
                 </IonCol>
               ))}
-            </IonRow> */}
+            </IonRow>
           </IonGrid>
       </IonContent>
     </IonPage>
