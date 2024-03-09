@@ -21,7 +21,7 @@ const UniformItem: React.FC<UniformItemProps> = ({ uniform }) => {
   const emitToSocket = (value: number, index: number) => {
     setUniformValue(value);
     setUniforms( 
-      uniforms.map((uniform) => {
+      uniforms.map((uniform:Uniform) => {
         if (uniform.id === index) {
           return {
             ...uniform,

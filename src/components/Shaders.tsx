@@ -1,5 +1,6 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { useParams } from 'react-router';
+import ShaderList from "./ShaderList";
 import './Shaders.css';
 
 interface ContainerProps {
@@ -24,13 +25,9 @@ const Shaders: React.FC<ContainerProps> = ({ name }) => {
      </IonHeader>
 
      <IonContent fullscreen>
-       <IonHeader collapse="condense">
-         <IonToolbar>
-           <IonTitle size="large">{name}</IonTitle>
-         </IonToolbar>
-       </IonHeader>
-      
-     </IonContent>
+      <ShaderList />
+     
+    </IonContent>
    </IonPage>
   );
 };
