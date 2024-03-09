@@ -9,8 +9,8 @@ import UniformList from "./UniformList";
 import './Controller.css';
 import { getPreferences, setPreferences } from '../lib/Utils';
 import { CONFIG } from '../config';
-import { WsMessage } from '../models/WsMessage';
-import { UNIFORMS } from '../uniforms';
+import { WsMessage } from '../models/WsMessage'; 
+import { Uniform } from '../models/Uniform';
 
 declare const window: any;
 
@@ -20,6 +20,7 @@ interface ContainerProps {
 
 const Controller: React.FC<ContainerProps> = ({ name }) => {
   const {
+    uniforms,
     setUniforms,
     wsReady,
     setWsReady,
@@ -62,7 +63,7 @@ const Controller: React.FC<ContainerProps> = ({ name }) => {
                     `ws rcvd inMsg.params[0].value: ${val}`
                   );
                   setUniforms(
-                    UNIFORMS.map((uniform) => {
+                    uniforms.map((uniform:Uniform) => {
                       if (uniform.id === idx) {
                         return {
                           ...uniform,

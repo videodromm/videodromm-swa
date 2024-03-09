@@ -2,14 +2,6 @@ import { Uniform } from "./models/Uniform";
 
 export const UNIFORMS:Uniform[] = [
   {
-    "name": "time",
-    "about": "",
-    "title": "Time",
-    "color": "#222",
-    "value": 1.2,
-    "id": 0
-  },
-  {
     "name": "r",
     "about": "(foreground)",
     "title": "Red",
