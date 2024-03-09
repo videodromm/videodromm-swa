@@ -2,7 +2,6 @@ import React from 'react';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonButtons, IonMenuButton, IonGrid, IonRow, IonCol } from '@ionic/react';
 import UniformItem from './UniformItem';
 import { Uniform } from '../models/Uniform';
-import { Shader } from '../models/Glsl';
 import useStore from "../data/store";
 import { CONFIG } from "../config";
 import './UniformList.css';
