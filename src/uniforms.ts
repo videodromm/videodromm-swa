@@ -14,7 +14,7 @@ export const UNIFORMS:Uniform[] = [
     "about": "(foreground)",
     "title": "Green",
     "color": "#0f0",
-    "value": 0.82,
+    "value": 0.0,
     "id": 2
   },
   {
@@ -22,7 +22,7 @@ export const UNIFORMS:Uniform[] = [
     "about": "(foreground)",
     "title": "Blue",
     "color": "#00f",
-    "value": 0.22,
+    "value": 0.92,
     "id": 3
   },
   {
@@ -30,7 +30,7 @@ export const UNIFORMS:Uniform[] = [
     "about": "(foreground)",
     "title": "Alpha",
     "color": "#aaa",
-    "value": 0.42,
+    "value": 1.0,
     "id": 4
   },
   {
@@ -38,7 +38,7 @@ export const UNIFORMS:Uniform[] = [
     "about": "(foreground)",
     "title": "RedMultiplier",
     "color": "#f00",
-    "value": 0.42,
+    "value": 1.0,
     "id": 5
   },
   {
@@ -46,7 +46,7 @@ export const UNIFORMS:Uniform[] = [
     "about": "(foreground)",
     "title": "GreenMultiplier",
     "color": "#0f0",
-    "value": 0.42,
+    "value": 1.0,
     "id": 6
   },
   {
@@ -54,7 +54,7 @@ export const UNIFORMS:Uniform[] = [
     "about": "(foreground)",
     "title": "BlueMultiplier",
     "color": "#00f",
-    "value": 0.42,
+    "value": 1.0,
     "id": 7
   },
   {
@@ -70,7 +70,7 @@ export const UNIFORMS:Uniform[] = [
     "about": "zoom",
     "title": "Zoom",
     "color": "#0a3",
-    "value": 0.42,
+    "value": 1.0,
     "id": 12
   },
   {
@@ -78,7 +78,7 @@ export const UNIFORMS:Uniform[] = [
     "about": "audio multiplier",
     "title": "AudioMultiplier",
     "color": "#6a3",
-    "value": 0.42,
+    "value": 1.0,
     "id": 13
   },
   {
@@ -86,7 +86,7 @@ export const UNIFORMS:Uniform[] = [
     "about": "exposure",
     "title": "Exposure",
     "color": "#444",
-    "value": 0.42,
+    "value": 1.0,
     "id": 14
   },
   {
@@ -94,7 +94,7 @@ export const UNIFORMS:Uniform[] = [
     "about": "pixelate",
     "title": "Pixelate",
     "color": "#604",
-    "value": 0.42,
+    "value": 1.0,
     "id": 15
   },
   {
@@ -102,7 +102,7 @@ export const UNIFORMS:Uniform[] = [
     "about": "trixels",
     "title": "Trixels",
     "color": "#604",
-    "value": 0.42,
+    "value": 0.0,
     "id": 16
   },
   {
@@ -113,33 +113,7 @@ export const UNIFORMS:Uniform[] = [
     "value": 0.0,
     "id": 17
   },
-  {
-    "name": "br",
-    "about": "(background)",
-    "title": "BG Red",
-
-    "color": "#f00",
-    "value": 0.42,
-    "id": 26
-  },
-  {
-    "name": "bg",
-    "about": "(background)",
-    "title": "BG Green",
-
-    "color": "#0f0",
-    "value": 0.42,
-    "id": 27
-  },
-  {
-    "name": "bb",
-    "about": "(background)",
-    "title": "BG Blue",
-
-    "color": "#00f",
-    "value": 0.42,
-    "id": 28
-  },
+  
   {
     "name": "w0",
     "about": "(mix weight)",

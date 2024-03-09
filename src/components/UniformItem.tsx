@@ -16,7 +16,7 @@ const UniformItem: React.FC<UniformItemProps> = ({ uniform }) => {
     uniforms,
     setUniforms,
   } = useStore();
-  const [uniformValue, setUniformValue] = React.useState<number>(0.5);
+  const [uniformValue, setUniformValue] = React.useState<number>(1.001);
   let dialRefs = React.useRef([] as any[]);
   const emitToSocket = (value: number, index: number) => {
     setUniformValue(value);

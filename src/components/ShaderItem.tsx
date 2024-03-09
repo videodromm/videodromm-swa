@@ -15,9 +15,9 @@ const ShaderItem: React.FC<ShaderItemProps> = ({ shader }) => {
     shaders,
     setShaders,
   } = useStore();
-  const [shaderValue, setShaderValue] = React.useState<string>("0.5");
+  //const [shaderValue, setShaderValue] = React.useState<string>("0.5");
   const emitToSocket = (value: string, index: number) => {
-    setShaderValue(value);
+    //setShaderValue(value);
     setShaders( 
       shaders.map((shader:Shader) => {
         if (shader.id === index) {
