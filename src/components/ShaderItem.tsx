@@ -61,18 +61,16 @@ const ShaderItem: React.FC<ShaderItemProps> = ({ shader }) => {
         <IonCardHeader onClick={emitFragToSocket}>
           <IonLabel>
           <h3>{shader.name}</h3>
-          { shader.thumbnail && (<img
-            src={shader.thumbnail}
-            alt="thumbnail"
-          />)}
-          <p>
-            {shader.author}
-          </p>
+         
           </IonLabel>
         </IonCardHeader>
 
         <IonCardContent>
-          
+           { shader.thumbnail && (<img
+            src={shader.thumbnail}
+            alt="thumbnail"
+          />)}
+         
         </IonCardContent>
       </IonCard>
     </>
